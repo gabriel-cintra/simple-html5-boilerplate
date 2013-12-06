@@ -1,6 +1,6 @@
-/* =============================================================================
-   HTML5 Boilerplate CSS: h5bp.com/css
-   ========================================================================== */
+/*------------------------------------------------------------------------
+  Boiler Plate Html 5
+------------------------------------------------------------------------*/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block; }
 
@@ -223,32 +223,11 @@ td {
   color: black;
   padding: .2em 0; }
 
-/* ===== Primary Styles ========================================================
-   Author: 
-   ========================================================================== */
-/* -----------------------------------
-    $Index
-
-    $Global
-    $structure
-    $Grid
-    $Form
-    $Header
-    $Footer
-    $Plugins
-    $Responsive
-    $Support classes
-    $Print
-    ----------------------------------- */
-/* -----------------------------------
-    $Global
-    ----------------------------------- */
-/* -----------------------------------
-    $structure
-    ----------------------------------- */
-/* -----------------------------------
-    $Grid (http://gridiculo.us/)
-    ----------------------------------- */
+/*------------------------------------------------------------------------
+  Plugins
+    $Gridculous
+    $Fancybox 2.1.5
+------------------------------------------------------------------------*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -371,48 +350,6 @@ img {
 .end {
   float: right !important; }
 
-/* -----------------------------------
-    $Form
-    ----------------------------------- */
-/* -----------------------------------
-    $Header
-    ----------------------------------- */
-/* -----------------------------------
-    $Footer
-    ----------------------------------- */
-/*  Sticky Footer Solution by Steve Hatcher  http://stever.ca
-http://www.cssstickyfooter.com */
-html, body {
-  height: 100%; }
-
-.wrapper {
-  min-height: 100%; }
-
-.main {
-  overflow: auto;
-  padding-bottom: 180px; }
-
-/* must be same height as the footer */
-.main-footer {
-  position: relative;
-  margin-top: -180px;
-  /* negative value of footer height */
-  height: 180px;
-  clear: both; }
-
-/*Opera Fix*/
-body:before {
-  content: "";
-  height: 100%;
-  float: left;
-  width: 0;
-  margin-top: -32767px;
-  /* thank you Erik J - negate effect of float*/ }
-
-/* -----------------------------------
-    $Plugins 
-    ----------------------------------- */
-/*Fancybox 2.1.5*/
 .fancybox-overlay * {
   transition: none !important; }
 
@@ -634,35 +571,40 @@ body:before {
   #fancybox-loading div {
     background-image: url(../js/libs/fancybox/source/fancybox_loading@2x.gif);
     background-size: 24px 24px; } }
-/* =============================================================================
-   Media Queries ($Responsive)
-   ========================================================================== */
-/* =Media query for 960 Screens - sets nested grids to 100%
--------------------------------------------------------------- */
-@media only screen and (max-width: 960px) {
-  .row .row .c1, .row .row .c2, .row .row .c3, .row .row .c4, .row .row .c5, .row .row .c6, .row .row .c7, .row .row .c8, .row .row .c9, .row .row .c10, .row .row .c11, .row .row .c12 {
-    width: 100%;
-    margin-bottom: 20px; }
+/*------------------------------------------------------------------------
+  Starting CSS
+    $stick footer
+    $non semantic
+------------------------------------------------------------------------*/
+/*  Sticky Footer Solution by Steve Hatcher  http://stever.ca
+http://www.cssstickyfooter.com */
+html, body {
+  height: 100%; }
 
-  .row .row > div:last-child {
-    margin-bottom: 0 !important; } }
-/* =Media query for iPad and tablets
--------------------------------------------------------------- */
-@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation: portrait) {
-  body {
-    font-size: 90%; }
+.wrapper {
+  min-height: 100%; }
 
-  .row {
-    margin-bottom: 0 !important; }
+.main {
+  overflow: auto;
+  padding-bottom: 180px; }
 
-  .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 20px; } }
-/* =============================================================================
-   Non-Semantic Helper Classes
-   ========================================================================== */
+/* must be same height as the footer */
+.main-footer {
+  position: relative;
+  margin-top: -180px;
+  /* negative value of footer height */
+  height: 180px;
+  clear: both; }
+
+/*Opera Fix*/
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/ }
+
 /* $support */
 .left {
   float: left; }
@@ -726,9 +668,6 @@ body:before {
 .clearfix {
   *zoom: 1; }
 
-/* =============================================================================
-  $Print Styles
-  ========================================================================== */
 @media print {
   * {
     background: transparent !important;
@@ -775,3 +714,32 @@ body:before {
 
   h2, h3 {
     page-break-after: avoid; } }
+/*------------------------------------------------------------------------
+  Page Contents
+------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------
+  Media Queries
+------------------------------------------------------------------------*/
+/* =Media query for 960 Screens - sets nested grids to 100%
+-------------------------------------------------------------- */
+@media only screen and (max-width: 960px) {
+  .row .row .c1, .row .row .c2, .row .row .c3, .row .row .c4, .row .row .c5, .row .row .c6, .row .row .c7, .row .row .c8, .row .row .c9, .row .row .c10, .row .row .c11, .row .row .c12 {
+    width: 100%;
+    margin-bottom: 20px; }
+
+  .row .row > div:last-child {
+    margin-bottom: 0 !important; } }
+/* =Media query for iPad and tablets
+-------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation: portrait) {
+  body {
+    font-size: 90%; }
+
+  .row {
+    margin-bottom: 0 !important; }
+
+  .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 20px; } }
